@@ -88,7 +88,7 @@ $hook->addMenuLang('en',$lang["english"], '?strLangue=en', 'en.png', '3');
 $hook->addMenuLang('fr',$lang["french"], '?strLangue=fr', 'fr.png', '4');
 $hook->addMenuLang('ru',$lang["russe"], '?strLangue=ru', 'ru.png', '5');
 $hook->addMenuLang('nl',$lang["dutch"], '?strLangue=nl', 'nl.png', '2');
- 
+$hook->addMenuLang('it',$lang["italian"], '?strLangue=it', 'it.png', '6'); 
 // Usermenu hook
 if (!$userId) {
 	$hook->addUserMenu('gestcp','','','', '4');
