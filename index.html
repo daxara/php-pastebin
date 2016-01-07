@@ -1,40 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Php-pastebin : Php-pastebin" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Php-pastebin by daxara</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Php-pastebin</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/daxara/php-pastebin">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/daxara/php-pastebin/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/daxara/php-pastebin/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/atmoner/php-pastebin-v3">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">Php-pastebin</h1>
-          <h2 id="project_tagline">Php-pastebin</h2>
+      <section>
+        <div id="title">
+          <h1>Php-pastebin</h1>
+          <p>Php-pastebin</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/daxara">daxara</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/atmoner/php-pastebin-v3/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/atmoner/php-pastebin-v3/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
         <h1>
-<a name="php-pastebin-v3" class="anchor" href="#php-pastebin-v3"><span class="octicon octicon-link"></span></a>Php-pastebin V3</h1>
+<a id="php-pastebin-v3" class="anchor" href="#php-pastebin-v3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Php-pastebin V3</h1>
 
-<hr><ul>
+<hr>
+
+<ul>
 <li>  <a href="#what-is-php-pastebin" title="What is Php-pastebin?">What is Php-pastebin?</a>
 </li>
 <li>  <a href="#how-to-install-php-pastebin" title="How to install php-pastebin?">How to install php-pastebin?</a>
@@ -45,8 +54,10 @@
 </li>
 <li>  <a href="#thanks" title="Thanks">Thanks</a>
 </li>
-</ul><h3>
-<a name="what-is-php-pastebin" class="anchor" href="#what-is-php-pastebin"><span class="octicon octicon-link"></span></a>What is Php-pastebin?</h3>
+</ul>
+
+<h3>
+<a id="what-is-php-pastebin" class="anchor" href="#what-is-php-pastebin" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Php-pastebin?</h3>
 
 <blockquote>
 <p>Pastebin is here to help you collaborate on debugging code snippets.<br>
@@ -58,8 +69,10 @@ If you're not familiar with the idea, most people use it like this:  </p>
 </li>
 <li>  Getting a url like <a href="http://demo.php-pastebin.com/DSNnglex">http://demo.php-pastebin.com/DSNnglex</a>,</li>
 <li>  paste the url into an IRC or IM conversation, someone responds by reading and perhaps submitting a modification of your code, you then view the modification, maybe using the built in diff tool to help locate the changes</li>
-</ul><h3>
-<a name="how-to-install-php-pastebin" class="anchor" href="#how-to-install-php-pastebin"><span class="octicon octicon-link"></span></a>How to install php-pastebin?</h3>
+</ul>
+
+<h3>
+<a id="how-to-install-php-pastebin" class="anchor" href="#how-to-install-php-pastebin" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install php-pastebin?</h3>
 
 <p>To install php-pastebin, you do not need much!  </p>
 
@@ -70,13 +83,15 @@ If you're not familiar with the idea, most people use it like this:  </p>
 </li>
 <li> mod_rewrite enabled on your apache web server (see it in your phpinfo())<br>
 </li>
-</ol><p>To begin, send your file on ftp and open your browser to the selected domain name, you should see the installation page.<br>
+</ol>
+
+<p>To begin, send your file on ftp and open your browser to the selected domain name, you should see the installation page.<br>
 Follow the installation instructions.</p>
 
 <p>Once the installation is complete, you must delete the install.php file, libs/db.sql and put a chmod 644 on the file libs/db.php</p>
 
 <h3>
-<a name="how-to-upgrade-v2-to-v3" class="anchor" href="#how-to-upgrade-v2-to-v3"><span class="octicon octicon-link"></span></a>How to upgrade v2 to v3?</h3>
+<a id="how-to-upgrade-v2-to-v3" class="anchor" href="#how-to-upgrade-v2-to-v3" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to upgrade v2 to v3?</h3>
 
 <p>To update your version of php-pastebin, you must:  </p>
 
@@ -95,19 +110,23 @@ Follow the installation instructions.</p>
 <li>Replace db.php with your</li>
 </ul>
 </li>
-<li> Download <a href="http://wiki.php-pastebin.com/_media/upgrade.php" title="upgrade.php">upgrade.php</a> and add it at root of your script<br><ul>
+<li> Download <a href="http://wiki.php-pastebin.com/_media/upgrade.php" title="upgrade.php">upgrade.php</a> and add it at root of your script<br>
+
+<ul>
 <li>Go on your navigator and open upgrade.php</li>
 <li>Click on "Upgrade v2 to v3 now!"</li>
 </ul>
 </li>
 <li> Remove upgrade.php and go on your website</li>
-</ol><h3>
-<a name="demonstration" class="anchor" href="#demonstration"><span class="octicon octicon-link"></span></a>Demonstration</h3>
+</ol>
+
+<h3>
+<a id="demonstration" class="anchor" href="#demonstration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demonstration</h3>
 
 <p><a href="http://demo.php-pastebin.com/" title="Demonstration">Demonstration</a></p>
 
 <h3>
-<a name="thanks" class="anchor" href="#thanks"><span class="octicon octicon-link"></span></a>Thanks</h3>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks</h3>
 
 <p>For safety tests, thanks to:</p>
 
@@ -120,24 +139,18 @@ Follow the installation instructions.</p>
 </li>
 <li>  <a href="https://twitter.com/BinarySecurity" title="@BinarySecurity ">@BinarySecurity </a>
 </li>
-</ul><p>For Debug, thanks to:</p>
+</ul>
+
+<p>For Debug, thanks to:</p>
 
 <ul>
 <li>  <a href="https://twitter.com/QuentinF_" title="@QuentinF_">@QuentinF_</a>
 </li>
 </ul>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Php-pastebin maintained by <a href="https://github.com/atmoner">atmoner</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
